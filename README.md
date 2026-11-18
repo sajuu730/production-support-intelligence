@@ -117,7 +117,7 @@ Invoke-RestMethod -Method Post `
   -Body $body
 ```
 
-The API also supports incident listing, retrieval, assignment, lifecycle transitions, activity history and diagnostic analysis. See [docs/api.md](docs/api.md) for request examples and the complete endpoint list.
+The API also supports incident listing, retrieval, assignment, lifecycle transitions, activity history and diagnostic analysis. See [docs/api.md](docs/api.md) for request examples and the complete endpoint list. For an end-to-end support-engineer scenario with PowerShell commands and an interview narrative, see the [incident walkthrough](docs/demo-walkthrough.md).
 
 ## SLA policy examples
 
@@ -147,6 +147,7 @@ The test profile uses H2. The GitHub Actions workflow runs Maven verification on
 - [API guide](docs/api.md)
 - [Operations guide](docs/operations.md)
 - [Demo scenarios and evidence checklist](docs/demo-scenarios.md)
+- [End-to-end incident walkthrough](docs/demo-walkthrough.md)
 - [Scope and known limitations](docs/limitations.md)
 
 ## Scope and engineering boundaries
