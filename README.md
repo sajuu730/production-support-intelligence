@@ -29,6 +29,22 @@ flowchart LR
     Actuator --> Prom[Prometheus scrape endpoint]
 ```
 
+## Application screenshots
+
+The following screenshots were captured from the locally running demo application.
+
+### Swagger API documentation
+
+![Swagger API documentation](docs/images/swagger-api.png)
+
+### Diagnostic analysis
+
+![Diagnostic analysis response](docs/images/diagnostic-analysis-result.png)
+
+### Incident activity history
+
+![Incident activity history](docs/images/incident-history.png)
+
 ## Technology
 
 | Area | Technology |
