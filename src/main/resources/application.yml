@@ -1,0 +1,40 @@
+server:
+  shutdown: graceful
+spring:
+  application:
+    name: production-support-intelligence
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/support_intelligence}
+    username: ${SPRING_DATASOURCE_USERNAME:support_app}
+    password: ${SPRING_DATASOURCE_PASSWORD:local-demo-password}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate.jdbc.time_zone: UTC
+  flyway:
+    enabled: true
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+app:
+  security:
+    username: ${APP_SECURITY_USERNAME:support}
+    password: ${APP_SECURITY_PASSWORD:change-me-demo}
+incident:
+  sla-monitor-interval: ${INCIDENT_SLA_MONITOR_INTERVAL:30000}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
